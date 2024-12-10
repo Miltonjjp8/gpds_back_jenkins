@@ -16,3 +16,12 @@ services:
 networks:
   app-network:
     driver: bridge
+    db:
+        image: mysql
+        ports:
+            - "3307:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: rootpassword
+            MYSQL_DATABASE: mydatabase
+            MYSQL_USER: myuser
+            MYSQL_PASSWORD: mypassword
